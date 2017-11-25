@@ -1,3 +1,54 @@
+# 2. GETTING STARTED
+
+# How to set up your computer
+
+# Installing Conda
+#
+# https://www.biostarhandbook.com/setup/setup-conda.html
+# bash Anaconda3-5.0.1-Linux-x86_64.sh
+# conda config --add channels r
+# conda config --add channels conda-forge
+# conda config --add channels bioconda
+# 
+# source deactivate
+# conda update conda
+# conda create -y --name bioinfo python=3 
+# source activate bioinfo
+# curl http://data.biostarhandbook.com/install/conda.txt | xargs conda install -y
+#
+# curl http://data.biostarhandbook.com/install/conda.txt | xargs conda upgrade
+
+mkdir -p ~/bin
+curl http://data.biostarhandbook.com/install/doctor.py > ~/bin/doctor.py
+chmod +x ~/bin/doctor.py
+
+#
+# More tools
+#
+# seqkit
+conda install -c bioconda seqkit
+
+# taxonkit
+# Please download and uncompress these files:
+# ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
+# And copy "names.dmp" and "nodes.dmp" to data directory: "$HOME/.taxonkit".
+conda install -c bioconda taxonkit
+wget ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
+mkdir tmp
+tar -xzf taxdump.tar.gz -C tmp
+mv names.dmp $HOME/.taxonkit
+mv nodes.dmp $HOME/.taxonkit
+
+# wcd
+export WCDHOME=$HOME
+function wcd
+{
+  $HOME/usr/local/bin/wcd.exe "$@"
+  . ${WCDHOME:-${HOME}}/bin/wcd.go
+}
+alias wcdb='wcd -xf $HOME/Dropbox/.ban.wcd -s'
+
+exit
 
 curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/4/1259657_table_s1.zip
 curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/3/1259657_file_s4.zip
