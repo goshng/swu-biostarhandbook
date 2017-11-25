@@ -1,0 +1,10 @@
+
+curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/4/1259657_table_s1.zip
+curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/3/1259657_file_s4.zip
+curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/0/1259657_file_s1.zip
+curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/7/1259657_table_s4.zip
+curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/5/1259657_table_s2.zip
+curl -OkL http://science.sciencemag.org/highwire/filestream/595764/field_highwire_adjunct_files/4/1259657_table_s1.zip
+
+curl -OkL http://www.cell.com/cms/attachment/2055417636/2061019276/mmc2.xlsx
+curl -OkL http://www.cell.com/cms/attachment/2055417636/2061019275/mmc1.pdf
